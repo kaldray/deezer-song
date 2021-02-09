@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Connexion - Deez'Web</title>
+
+        <link rel="stylesheet" href="lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/app.css" />
+        <script src="lib/jquery.min.js" defer></script>
+        <script src="lib/bootstrap.min.js" defer></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"
+            defer
+        ></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"
+            defer
+        ></script>
+        <script src="scripts/login.js" type="module" defer></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-info bg-info sticky-top">
+            <a class="navbar-brand text-light" href="#">🎶 Deezweb</a>
+        </nav>
+
+        <main class="container mt-4 pb-5">
+            <div class="jumbotron text-center">
+                <h1 class="display-4">
+                    <div class="d-flex justify-content-center">
+                        <span class="music music-animated music-info"></span>
+                    </div>
+                    Deez'Web
+                </h1>
+                <p class="lead">L'application musicale qui shake ton body</p>
+                <hr class="my-4" />
+                <p>
+                    Afin de mieux profiter du projet et pouvoir organiser vos
+                    favoris, commencez par vous identifier :
+                </p>
+                <a
+                    class="btn btn-dark btn-lg"
+                    href="#"
+                    role="button"
+                    id="login"
+                >
+                    S'identifier avec Github</a
+                >
+            </div>
+        </main>
+    </body>
 </html>

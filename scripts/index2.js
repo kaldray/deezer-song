@@ -17,8 +17,6 @@ const success = resultsContainer.querySelector(".text-success");
 const results = document.querySelector("#songresult");
 const recuperation = document.querySelector("#searchText");
 const player = document.querySelector("#player-container audio");
-const login = document.querySelector("#login");
-const logout = document.querySelector("#logout");
 
 let nextURL = "";
 let resultsLoaded = true;

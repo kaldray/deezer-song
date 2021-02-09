@@ -144,3 +144,17 @@
         transform: scaleY(0.8);
     }
 }
+
+.music.music-animated {
+    animation: playing 650ms infinite;
+    background-color: #17a2b8;
+}
+
+.music,
+.music::before,
+.music::after {
+    width: 0.25em;
+    background-color: #17a2b8;
+    border-radius: 0.25em;
+    transform-origin: 50% 100%;
+}
