@@ -10,6 +10,16 @@
     border-color: black;
 }
 
+@media (min-width: 992px) {
+    #player-container {
+        order: 1;
+    }
+
+    .nav-right {
+        margin-left: auto;
+    }
+}
+
 #player-container audio {
     max-height: 2em;
     flex: 3;

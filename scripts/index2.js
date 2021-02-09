@@ -7,20 +7,20 @@ import {
     getFavoriteFromStorage,
     saveFavoritesToStorage,
 } from "./functions.js";
+import "./authentification.js";
 
- export const FAVORITES = getFavoriteFromStorage();
-let l;
+export const FAVORITES = getFavoriteFromStorage();
+
 const form = document.querySelector("form");
-// const results = document.querySelector("#results-list");
 const resultsContainer = document.querySelector("#search-results");
 const success = resultsContainer.querySelector(".text-success");
-const error = resultsContainer.querySelector(".text-danger");
 const results = document.querySelector("#songresult");
 const recuperation = document.querySelector("#searchText");
 const player = document.querySelector("#player-container audio");
+const login = document.querySelector("#login");
+const logout = document.querySelector("#logout");
 
 let nextURL = "";
-
 let resultsLoaded = true;
 
 // Lorsqu'on valide le formulaire
@@ -29,10 +29,12 @@ addEvents(form, "submit", submitForm);
 addEvents(document, "scroll", onScroll);
 // Lorsqu'on clique sur un bouton "Ecouter"
 addEvents(resultsContainer, "click", ".play-button", onPlay);
-
+// Animation des barres musicales
 addEvents(player, "play pause", onTogglePlayPause);
 
 addEvents(resultsContainer, "click", ".fav-button", onToggleFavorite);
+
+
 
 function onScroll() {
     let positionAscenseur = Math.ceil(window.scrollY);

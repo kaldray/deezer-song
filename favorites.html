@@ -7,6 +7,9 @@
 
         <link rel="stylesheet" href="lib/bootstrap.min.css" />
         <link rel="stylesheet" href="styles/app.css" />
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
         <script src="scripts/favorites.js" type="module" defer></script>
         <script src="/lib/jquery.min.js" defer></script>
         <script src="/lib/bootstrap.min.js" defer></script>
@@ -14,6 +17,20 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-info bg-info sticky-top">
             <a class="navbar-brand" href="#">🎶</a>
+            <div
+                class="d-none flex-row align-items-center"
+                id="player-container"
+            >
+                <span class="music"></span>
+                <a
+                    href="#"
+                    class="text-light"
+                    title="Écouter sur Deezer.com"
+                    target="_blank"
+                    ><ins>Musique titre</ins></a
+                >
+                <audio controls></audio>
+            </div>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -35,24 +52,34 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link text-light" href="favorites.html"
-                            >❤ Mes favoris</a
+                            >❤ Mes favoris
+                        </a>
+                    </li>
+                    <li class="nav-item nav-right" id="login">
+                        <a class="btn btn-dark" href="#">🐙 Connexion Github</a>
+                    </li>
+                    <li
+                        class="nav-item nav-right dropdown d-none"
+                        id="member"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        <a
+                            class="nav-link pt-0 pb-0 dropdown-toggle text-light"
                         >
+                            <img class="avatar rounded-circle" alt="" />
+                            <div
+                                class="navbar-text text-light"
+                                id="member-name"
+                            ></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="member">
+                            <a class="dropdown-item" href="#">🚪 Déconnexion</a>
+                        </div>
                     </li>
                 </ul>
-            </div>
-            <div
-                class="d-none flex-row align-items-center"
-                id="player-container"
-            >
-                <span class="music"></span>
-                <a
-                    href="#"
-                    class="text-light"
-                    title="Écouter sur Deezer.com"
-                    target="_blank"
-                    ><ins>Musique titre</ins></a
-                >
-                <audio controls></audio>
             </div>
         </nav>
 
