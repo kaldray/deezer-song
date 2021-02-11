@@ -1,12 +1,9 @@
 import { getFirstSibling } from "./utils.js";
 
-const STORAGE_KEY = "deezweb.favorites";
-
-export function renderSongs(songsArray) {
-    const FAVORITES = getFavoriteFromStorage();
+export function renderSongs(songsArray, favorites) {
     return songsArray
         .map((track) => {
-            const isInFavorites = FAVORITES.some(
+            const isInFavorites = favorites.some(
                 (item) => item.id === track.id
             );
             return `
@@ -89,8 +86,6 @@ export function onTogglePlayPause() {
     } else {
         music.classList.add("music-animated");
     }
-
-    console.log(player.paused);
 }
 
 // Fonction poyr recuperer depuis le storage du navigateur
